@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:id="@+id/verification_main_div"
+        android:background="@color/colorBg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="@dimen/toolbar_height">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingEnd="50dp"
+            android:layout_marginStart="@dimen/toolbar_margin_left"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/back_icon"
+            android:id="@+id/back_icon_verification" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verification"
+            android:textSize="15sp"
+            android:id="@+id/verification_title"
+            android:layout_centerInParent="true"
+            android:textColor="@color/bg_top_color"
+            android:gravity="center_horizontal|center_vertical" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:text="@string/done_label"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textStyle="normal"
+            android:textColor="@color/bg_top_color"
+            android:id="@+id/btn_done" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorEditTextBG"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:text="@string/conformation_desc"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/desc_text_verification"
+            />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite">
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:text="Canada"
+            android:layout_toStartOf="@+id/right_arrow"
+            android:background="@null" />
+
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/right_arrow"
+            android:layout_marginEnd="15dp"
+            android:id="@+id/right_arrow"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/country_code"
+            android:layout_marginStart="15dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:text="+1"
+            />
+
+        <com.github.reinaldoarrosi.maskededittext.MaskedEditText
+            android:id="@+id/country_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/country_code"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:textSize="14sp"
+            android:inputType="phone"
+            android:ems="10"
+            app:mask="(999) 999 9999"
+            app:placeholder="-"
+            android:background="@null"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorEditTextBG"/>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/div">
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/confirm_screen"
+        android:visibility="gone">
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/confirmation_screen" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

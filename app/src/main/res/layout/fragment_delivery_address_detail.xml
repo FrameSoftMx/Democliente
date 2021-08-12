@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ActivitiesAndFragments.DeliveryAddressDetail_F">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:background="@drawable/round_shape_dialog_white"
+       android:paddingTop="@dimen/_20sdp"
+       android:paddingStart="@dimen/_10sdp"
+       android:paddingEnd="@dimen/_10sdp">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/delivery_details"
+           android:textSize="@dimen/_20sdp"
+           android:textColor="@color/colorBlack"/>
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:cardBackgroundColor="@color/colorWhite"
+           app:cardCornerRadius="@dimen/_5sdp"
+           android:layout_marginTop="@dimen/_20sdp"
+           android:layout_marginStart="@dimen/_2sdp"
+           android:layout_marginEnd="@dimen/_2sdp"
+           app:cardElevation="1dp">
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:paddingTop="@dimen/_10sdp"
+               android:paddingBottom="@dimen/_10sdp">
+
+
+           <ImageView
+               android:layout_width="@dimen/_24sdp"
+               android:layout_height="@dimen/_24sdp"
+               app:tint="@color/colorAccent"
+               android:id="@+id/location_btn"
+               android:layout_centerVertical="true"
+               android:src="@drawable/ic_map"/>
+
+
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/address_txt"
+               android:layout_toStartOf="@id/edit_btn"
+               android:layout_toEndOf="@+id/location_btn"
+               android:textSize="@dimen/_14sdp"
+               android:layout_centerVertical="true"
+               android:layout_marginStart="@dimen/_5sdp"
+               android:textColor="@color/colorBlack"
+               android:text="Here is your delivery address"/>
+
+
+
+               <ImageView
+                   android:layout_width="38dp"
+                   android:layout_height="38dp"
+                   android:id="@+id/edit_btn"
+                   android:layout_centerVertical="true"
+                   android:scaleType="fitCenter"
+                   android:layout_alignParentEnd="true"
+                   android:src="@drawable/ic_location_edit"
+                   />
+
+
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColorHint="@color/colorDeal"
+           android:theme="@style/TextLabel"
+           android:layout_below="@+id/address_layout"
+           android:layout_marginTop="@dimen/_15sdp"
+           android:hint="@string/optional_rider_instructions">
+
+             <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textColor="@color/colorBlack"
+               android:textSize="@dimen/_14sdp"
+               android:id="@+id/rider_instruction_edit"/>
+
+       </com.google.android.material.textfield.TextInputLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/confirm_btn"
+           android:background="@drawable/round_shape_btn_login"
+           android:layout_marginTop="@dimen/_15sdp"
+           android:layout_marginBottom="@dimen/_20sdp">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Confirm"
+               android:gravity="center"
+               android:textSize="@dimen/_20sdp"
+               android:padding="@dimen/_8sdp"
+               android:textColor="@color/bg_top_color"/>
+
+       </LinearLayout>
+
+   </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <!--change only the package name_f if you have change the package name_f of app-->
+
+    <external-path name="my_images" path="Android/data/com.operialcompany.Democliente/files/Pictures" />
+
+    <external-path name="external_files" path="."/>
+
+</paths>

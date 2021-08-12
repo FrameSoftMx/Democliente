@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/colorBg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/edit_account_main_container">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_sign_up"
+        android:orientation="vertical">
+
+        <RelativeLayout
+             android:layout_width="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="@dimen/toolbar_height">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingEnd="50dp"
+                android:layout_marginStart="@dimen/toolbar_margin_left"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/back_icon"
+                android:id="@+id/back_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_account"
+                android:textSize="15sp"
+                android:id="@+id/signup_title"
+                android:layout_centerInParent="true"
+                android:textColor="@color/bg_top_color"
+                android:gravity="center_horizontal|center_vertical" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/done"
+                android:textAllCaps="false"
+                android:fontFamily="@font/verdana"
+                android:id="@+id/btn_edit_done"
+                android:textSize="14sp"
+                android:background="@color/transparent"
+                android:textColor="@color/bg_top_color"/>
+
+        </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@+id/tv_fname"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/first_name"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/color_light_black"
+                    android:imeOptions="actionNext"
+                    android:inputType="textWebEmailAddress"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"/>
+
+
+
+                <EditText
+                    android:id="@+id/last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/first_name"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@+id/tv_lname"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/last_name"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/color_light_black"
+                    android:textSize="14sp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textWebEmailAddress"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"/>
+
+
+                <EditText
+                    android:id="@+id/ed_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/last_name"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:inputType="text"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@+id/tv_email"
+                    android:background="@color/colorWhite"
+                    android:hint="******"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/color_light_black"
+                    android:textSize="14sp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/ed_edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/ed_phone_number"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:inputType="text"
+                    android:layout_marginTop="1dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textSize="14sp"
+                    android:layout_toEndOf="@+id/tv_email"
+                    android:background="@color/colorWhite"
+                    android:hint="******"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/color_light_black"
+
+                    />
+
+            </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/transparent_layer"
+        android:visibility="gone"
+        android:background="@color/transparent_tint">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:id="@+id/progressDialog"
+        android:visibility="gone"
+        android:background="@drawable/round_shape_dialog_white"
+        >
+        <com.gmail.samehadar.iosdialog.CamomileSpinner
+            android:id="@+id/editAccountProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:spinnerColor="@color/colorRed"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

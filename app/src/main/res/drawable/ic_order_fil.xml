@@ -1,0 +1,10 @@
+<vector android:height="24dp" android:viewportHeight="24.0"
+    android:viewportWidth="24.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:name="randomname"
+        android:translateX="-3.349">
+    <path android:fillColor="@color/color_icon" android:pathData="M22.78,14.93c0.01,0.12 -0.03,0.24 -0.11,0.32c-0.08,0.09 -0.23,0.14 -0.35,0.14l-3.25,0.06v4.12h-0.86V5.1c0,-0.19 0.16,-0.36 0.34,-0.41c0.18,-0.05 0.4,0.02 0.5,0.18C19.19,5.07 22.34,9.95 22.78,14.93z"/>
+    <path android:fillColor="@color/color_icon" android:pathData="M14.57,4.59h0.86v5.17c0,1.61 -1.07,2.93 -2.79,3.09v6.73h-0.86v-6.76C10.5,12.57 9.22,11.29 9.22,9.76V4.59h0.86v5.17c0,1.06 0.86,1.95 1.71,2.19V4.59h0.86v7.4c1.29,-0.16 1.93,-1.1 1.93,-2.23V4.59z"/>
+
+    </group>
+</vector>

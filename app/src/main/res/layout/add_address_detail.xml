@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/address_detail_container">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="@dimen/toolbar_height">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/add_address"
+            android:textColor="@color/bg_top_color"
+            android:id="@+id/title_city_tv"
+            android:textSize="15sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancle_add_address_btn"
+            android:background="@android:color/transparent"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:fontFamily="@font/verdana"
+            android:layout_centerVertical="true"
+            android:textColor="@color/bg_top_color"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save_address_btn"
+            android:background="@android:color/transparent"
+            android:text="@string/save"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:fontFamily="@font/verdana"
+            android:textColor="@color/bg_top_color"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingEnd="50dp"
+            android:layout_marginStart="@dimen/toolbar_margin_left"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/back_icon"
+            android:visibility="gone"
+            android:id="@+id/back_icon"/>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_sign_in">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:paddingStart="15dp"
+        android:background="@color/colorBg"
+
+        >
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/toolbar_sign_in"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:paddingStart="15dp"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/color_light_black"
+            android:id="@+id/st_address"
+            android:imeOptions="actionNext"
+            android:hint="@string/house_hint"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorEditTextBG"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:weightSum="2"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:id="@+id/add_city"
+                android:imeOptions="actionNext"
+                android:hint="@string/city_hint"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/color_light_black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="5dp"
+                android:background="@color/colorEditTextBG"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/add_loc_div">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/add_loc_tv"
+            android:layout_centerVertical="true"
+            android:paddingStart="15dp"
+            android:textColor="@color/color_light_black"
+            android:text="@string/add_loc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorEditTextBG"
+            android:layout_marginStart="2dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/toolbar_sign_in"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:paddingStart="15dp"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/color_light_black"
+            android:imeOptions="actionDone"
+            android:id="@+id/add_instructions"
+            android:hint="@string/inst_hint"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorEditTextBG"
+            />
+
+
+    </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/transparent_layer"
+        android:visibility="gone"
+        android:background="@color/transparent_tint">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:id="@+id/progressDialog"
+        android:visibility="gone"
+        android:background="@drawable/round_shape_dialog_white"
+        >
+        <com.gmail.samehadar.iosdialog.CamomileSpinner
+            android:id="@+id/pbHeaderProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:spinnerColor="@color/colorRed"
+            />
+    </RelativeLayout>
+
+
+</FrameLayout>

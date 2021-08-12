@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@drawable/round_dialog">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_instructions"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp"
+        android:id="@+id/title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/title"
+        android:id="@+id/code_div"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/edit_text_border"
+            android:id="@+id/ed_message"
+            android:imeOptions="actionDone"
+            android:hint="@string/type_here"
+            android:gravity="top"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/color_light_black"/>
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/code_div"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingEnd="8dp">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:text="@string/cancel"
+                android:id="@+id/cancel_btn"
+                android:textColor="@color/bg_light_top_color"
+                android:background="@color/colorEditTextBG"
+                android:layout_alignParentEnd="true"
+                style="?android:attr/borderlessButtonStyle"
+
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="8dp">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:text="@string/done_label"
+                android:background="@color/colorRed"
+                android:textColor="@color/bg_top_color"
+                android:id="@+id/done_btn"
+                style="?android:attr/borderlessButtonStyle"
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

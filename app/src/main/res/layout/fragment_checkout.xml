@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="@dimen/toolbar_height">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Checkout"
+                android:textColor="@color/bg_top_color"
+                android:id="@+id/order_title_tv"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:paddingEnd="50dp"
+                android:layout_marginStart="@dimen/toolbar_margin_left"
+                android:id="@+id/back_icon"
+                android:background="@android:color/transparent"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/back_icon"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorWhite"/>
+
+        </RelativeLayout>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:id="@+id/webview"
+            android:layout_below="@+id/toolbar"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress_bar"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

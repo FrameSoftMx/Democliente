@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorRed"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toStartOf="@+id/cancel_places"
+                    android:layoutDirection="ltr">
+                <EditText
+                    android:id="@+id/search_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/search"
+                    android:singleLine="true"
+
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/color_light_black"
+                    android:imeOptions="actionSearch"
+                    android:background="@drawable/search_background"
+                    android:drawableStart="@drawable/search_icon"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"/>
+                    
+                    <ImageView
+                        android:id="@+id/clear"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@android:drawable/ic_delete"
+                        android:backgroundTint="@color/colorEditTextBG"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+
+                        />
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/transparent"
+                    android:layout_centerVertical="true"
+                    android:textAllCaps="false"
+                    android:text="@string/cancel"
+                    android:id="@+id/cancel_places"
+                    android:textColor="@color/bg_top_color"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_layout"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

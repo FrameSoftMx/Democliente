@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:id="@+id/fl_trackorder"
+    android:background="@color/colorWhite">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:background="@drawable/d_bottom_gray_line"
+                android:id="@+id/toolbar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="50dp"
+                    android:layout_marginStart="@dimen/toolbar_margin_left"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:id="@+id/iv_back"
+                    app:tint="@color/colorBlack"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/back_icon"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_35sdp"
+                    android:includeFontPadding="false"
+                    android:text="Tracking"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    android:gravity="center"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/toolbar"
+                android:layout_alignParentBottom="true">
+
+
+                <com.google.android.gms.maps.MapView
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+        <include layout="@layout/f_delivery_status" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

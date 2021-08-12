@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Chat_F"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/writechatlayout"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="@dimen/_45sdp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:id="@+id/Goback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingEnd="50dp"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_alignParentStart="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/back_icon"
+                app:tint="@color/colorWhite" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/reciver_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:includeFontPadding="false"
+                    android:text="@string/support"
+                    android:textColor="@color/bg_top_color"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/writechatlayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/top_border"
+            android:padding="5dp">
+
+            <ImageButton
+                android:id="@+id/uploadfilebtn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:background="@color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add" />
+
+            <ImageView
+                android:id="@+id/sendbtn"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/d_round_mic_background"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_send"
+                android:text="Send"
+                android:visibility="gone"
+                app:tint="@color/colorWhite" />
+
+
+            <RelativeLayout
+                android:id="@+id/typing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="50dp"
+                android:layout_toEndOf="@+id/uploadfilebtn"
+                android:background="@drawable/round_corner_border">
+
+                <EditText
+                    android:id="@+id/msgedittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="Type Your Message Here..."
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/gray"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <com.devlomi.record_view.RecordButton
+                android:id="@+id/mic_btn"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="4dp"
+                android:background="@drawable/d_round_mic_background"
+                android:scaleType="centerInside"
+                app:mic_icon="@drawable/recv_ic_mic_white" />
+
+
+            <com.devlomi.record_view.RecordView
+                android:id="@+id/record_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/mic_btn"
+                app:counter_time_color="@color/colorAccent"
+                app:slide_to_cancel_arrow="@drawable/recv_ic_arrow"
+                app:slide_to_cancel_arrow_color="#000000"
+                app:slide_to_cancel_bounds="0dp"
+                app:slide_to_cancel_margin_right="10dp" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

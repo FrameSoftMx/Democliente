@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBg"
+    android:clickable="true"
+    tools:context=".ActivitiesAndFragments.Languages_F">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="@dimen/toolbar_height"
+        android:clickable="true"
+        android:id="@+id/toolbar">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Languages"
+            android:textSize="15sp"
+            android:id="@+id/login_title"
+            android:layout_centerInParent="true"
+            android:textColor="@color/bg_top_color"
+            android:gravity="center_horizontal|center_vertical" />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingEnd="50dp"
+            android:layout_marginStart="@dimen/toolbar_margin_left"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/back_icon"
+            android:id="@+id/back_icon"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/icon"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_language"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/icon"
+        android:text="App Languages"
+        android:id="@+id/language_title"
+        android:layout_marginStart="15dp"
+        android:textSize="17dp"
+        android:textColor="@color/colorBlack"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/icon"
+                android:layout_marginStart="15dp"
+                android:textSize="15dp"
+                android:text="Select your prefered language"
+                android:layout_below="@+id/language_title"
+                android:textColor="@color/colorBlack"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recylerview"/>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "67239699626",
+    "firebase_url": "https://vocado-f68d5-default-rtdb.firebaseio.com",
+    "project_id": "vocado-f68d5",
+    "storage_bucket": "vocado-f68d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67239699626:android:ec26e147d695d6cc74dcd3",
+        "android_client_info": {
+          "package_name": "com.operialcompany.Democliente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67239699626-5qrn28dk3ak9nsj28r57p4eepcde8oj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.operialcompany.Democliente",
+            "certificate_hash": "012c060b42a581f0e3073910ed29b26410c730af"
+          }
+        },
+        {
+          "client_id": "67239699626-avehrldc92fiphio8il1fk1mi2qslj3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnpDIz3zGUJ9poon1uM0CieGcNa5bliwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67239699626-avehrldc92fiphio8il1fk1mi2qslj3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

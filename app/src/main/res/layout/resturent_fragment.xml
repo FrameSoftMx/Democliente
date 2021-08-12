@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RestaurantsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/searchlayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/percentLayout"
+            android:focusableInTouchMode="true"
+            android:layoutDirection="ltr">
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toStartOf="@+id/res_filter"
+                android:layout_toEndOf="@id/search_icon"
+                android:backgroundTint="@color/transparent"
+                android:hint="@string/search_restaurant"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorEditTextBG"
+                android:textSize="13dp" />
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/search_icon" />
+
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/res_filter"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/colorAccent"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_filter"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/percentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/colorPrimaryDark"
+            android:layoutDirection="ltr"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/map_btn"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_map"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitStart"/>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/title_city_tv"
+                android:src="@drawable/drop_down_arrow" />
+
+            <TextView
+                android:id="@+id/title_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/bg_top_color"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchlayout">
+
+            <RelativeLayout
+                android:id="@+id/recycler_view_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/restaurant_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader
+                        android:id="@+id/header"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_alignParentTop="true"
+                        app:layout_heightPercent="42%"
+                        app:layout_widthPercent="100%">
+
+                        <include
+                            android:id="@+id/layout"
+                            layout="@layout/row_item_view_pager"></include>
+
+                    </com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>
+
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/transparent_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_tint"
+        android:clickable="true"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressDialog"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="@drawable/round_shape_dialog_white">
+
+        <com.gmail.samehadar.iosdialog.CamomileSpinner
+            android:id="@+id/restaurantProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:clockwise="true"
+            app:spinnerColor="@color/colorRed" />
+    </RelativeLayout>
+
+
+</FrameLayout>
